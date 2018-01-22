@@ -1,0 +1,1 @@
+{"virtualbox":{"/rails_project":{"guestpath":"/rails_project","hostpath":"/Users/shohei/Vagrant/CentOS","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/shohei/Vagrant/CentOS","disabled":false,"__vagrantfile":true}}}
