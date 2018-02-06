@@ -1,0 +1,8 @@
+<div class="post_task">
+
+<%=form_tag("/main/#{@task.id}/update") do %>
+  <textarea name="content"><%= @task.content %></textarea>
+  <input type="submit" value="保存">
+<% end %>
+
+</div>

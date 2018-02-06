@@ -1,0 +1,9 @@
+<div class="post_task">
+
+<%= @task.content %>
+
+<%= link_to("編集","/main/#{@task.id}/edit") %>
+
+<%= link_to("削除","/main/#{@task.id}/delete",method: :post) %>
+
+</div>
