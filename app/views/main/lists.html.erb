@@ -1,0 +1,7 @@
+<div class="post_task">
+
+<% @task.each do |task| %>
+<%=link_to(task.content,"/main/#{task.id}") %>
+<% end %>
+
+</div>
