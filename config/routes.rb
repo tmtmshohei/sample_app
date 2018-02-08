@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 get '/test'=>'test#test'
 
 get '/test/tree'=>'test#tree'
-
+get '/'=>'main#main'
 get '/main'=>'main#main'
 get '/main/lists'=>'main#lists'
 post '/main/create'=>'main#create'
