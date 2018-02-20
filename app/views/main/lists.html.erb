@@ -1,7 +1,8 @@
-<div class="post_task">
-
 <% @task.each do |task| %>
+<!-- 入力が一括で表示される　-->
+<div class="post_task">
 <%=link_to(task.content,"/main/#{task.id}") %>
-<% end %>
-
+<div class="delete_button"><%= link_to("削除","/main/#{task.id}/delete",method: :post) %></div>
+<div class="edit_button"><%= link_to("編集","/main/#{task.id}/edit") %></div>
 </div>
+<% end %>
