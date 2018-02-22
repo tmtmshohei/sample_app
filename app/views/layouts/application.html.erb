@@ -10,10 +10,11 @@
 
   <body>
 <header>
-  <li>
-    <%=link_to("投稿一覧","/main/lists") %>
-    <%=link_to("メインページ","/main") %>
-  </li>
+<ul class="menu">
+
+<li><a href="#"><%=link_to("投稿一覧","/tasks") %></a></li>
+<li><a href="#"><%=link_to("新規作成","/tasks/new") %></a></li>
+
 </header>
     <%= yield %>
   </body>

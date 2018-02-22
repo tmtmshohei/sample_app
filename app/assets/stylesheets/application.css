@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+
+ ul.menu {
+   width: 600px;
+   padding:0;
+   font-size:0px;
+ }
+
+ ul.menu li {
+   width:90px;
+   display: inline-block;
+   text-align: center;
+   font-size:16px;
+ }
+
+ ul.menu li:first-child {
+   height:60px;
+ }
+
+ ul.menu li a {
+   display: block;
+ }

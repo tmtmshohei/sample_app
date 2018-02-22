@@ -1,0 +1,13 @@
+<div class="post_task">
+
+<p><%= @task.content %></p>
+<p>期限：<%= @task.deadline_year %></p>
+<p>優先度：<%= @task.priority %></p>
+<p>メモ：<%= @task.memo %></p>
+
+
+<%= link_to("編集","/tasks/#{@task.id}/edit") %>
+
+<%= link_to("削除","/tasks/#{@task.id}/destroy",method: :post) %>
+
+</div>

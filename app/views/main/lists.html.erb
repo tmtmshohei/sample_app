@@ -1,8 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>タスク</th>
+      <th>期限</th>
+    </tr>
+  </thead>
+
+　<tbody>
 <% @task.each do |task| %>
+   <tr>
 <!-- 入力が一括で表示される　-->
-<div class="post_task">
-<%=link_to(task.content,"/main/#{task.id}") %>
-<div class="delete_button"><%= link_to("削除","/main/#{task.id}/delete",method: :post) %></div>
-<div class="edit_button"><%= link_to("編集","/main/#{task.id}/edit") %></div>
-</div>
+<td><div class="list_content"><%=link_to(task.content,"/main/#{task.id}") %></div></td>
+<td><div class="list_deadline_year"><%= task.deadline_year =%></div></td>
+<td class="delete_button"><%= link_to("削除","/main/#{task.id}/delete",method: :post) %></td>
+<td class="edit_button"><%= link_to("編集","/main/#{task.id}/edit") %></td>
+
+   </tr>
 <% end %>
+
+</table>

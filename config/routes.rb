@@ -1,8 +1,31 @@
 Rails.application.routes.draw do
+  root 'tasks#index'
+
+  get 'tasks/new' => 'tasks#new'
+
+  get '/tasks' => 'tasks#index'
+
+  post '/tasks' => 'tasks#create'
+
+  get '/tasks/:id'  => 'tasks#show'
+
+  get '/tasks/:id/edit' => 'tasks#edit'
+
+  patch '/tasks/:id/update' => 'tasks#update'
+
+  put '/tasks/:id/update' => 'tasks#update'
+
+  post '/tasks/:id/destroy' => 'tasks#destroy'
+
+
+
+
+
+
 get '/test'=>'test#test'
 
 get '/test/tree'=>'test#tree'
-root'main#main'
+
 get '/main'=>'main#main'
 get '/main/lists'=>'main#lists'
 post '/main/create'=>'main#create'

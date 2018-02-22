@@ -1,6 +1,7 @@
 class MainController < ApplicationController
 
 def  main
+  @task=Task.new
 end
 
 def  lists
@@ -8,7 +9,7 @@ def  lists
 end
 
 def create
-@task=Task.new(content: params[:content])
+@task=Task.new(task_params)
 @task.save
 redirect_to("/main/lists")
 end
@@ -32,8 +33,11 @@ def delete
 @task=Task.find_by(id: params[:id])
 @task.destroy
 redirect_to("/main/lists")
-
 end
 
+private
+def task_params
+  params.require(:task).permit(:content , :deadline_year)
+end
 
 end
