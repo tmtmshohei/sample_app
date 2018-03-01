@@ -16,13 +16,13 @@
 
 
  ul.menu {
-   width: 600px;
+   width: 800px;
    padding:0;
    font-size:0px;
  }
 
  ul.menu li {
-   width:90px;
+   width:120px;
    display: inline-block;
    text-align: center;
    font-size:16px;

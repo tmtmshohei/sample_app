@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180222084015) do
+ActiveRecord::Schema.define(version: 20180301065725) do
 
-  create_table "tasks", force: :cascade do |t|
-    t.text "content"
+# Could not dump table "tasks" because of following StandardError
+#   Unknown type 'strings' for column 'division'
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "deadline_year"
-    t.integer "priority"
-    t.string "memo"
   end
 
 end

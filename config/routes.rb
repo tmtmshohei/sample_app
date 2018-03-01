@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'tasks#index'
+  get '/signup' => 'users#new'
 
   get 'tasks/new' => 'tasks#new'
 
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   post '/tasks/:id/destroy' => 'tasks#destroy'
 
-
+  root 'tasks#index'
 
 
 

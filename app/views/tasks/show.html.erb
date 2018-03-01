@@ -1,9 +1,13 @@
 <div class="post_task">
 
+<% if @task.priority==1;@priority="低";elsif @task.priority==2;@priority="中";else @priority="高";end %>
+
 <p><%= @task.content %></p>
 <p>期限：<%= @task.deadline_year %></p>
-<p>優先度：<%= @task.priority %></p>
+<p>優先度：<%= @priority %></p>
+<p>分類：<%= @task.division %></p>
 <p>メモ：<%= @task.memo %></p>
+
 
 
 <%= link_to("編集","/tasks/#{@task.id}/edit") %>

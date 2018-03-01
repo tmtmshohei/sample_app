@@ -6,6 +6,8 @@
   <p><%= f.text_area :content , :rows =>"5" %></p>
   <p><%= f.date_field :deadline_year  %></p>
   <p><%= f.select :priority  , [["低",1],["中",2],["高",3]] %></p>
+  <p><%= f.select :division  , [["業務","業務"],["私生活","私生活"]] %></p>
+  <p><%= f.text_area :memo , :rows =>"8" %></p>
   <%= f.submit ("送信")  %>
   <% end %>
 </div>

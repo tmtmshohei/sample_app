@@ -4,16 +4,20 @@
       <th>タスク</th>
       <th>期限</th>
       <th>優先度</th>
+      <th>分類</th>
     </tr>
   </thead>
 
 　<tbody>
 <% @task.each do |task| %>
    <tr>
+
+<% if task.priority==1;@priority="低";elsif task.priority==2;@priority="中";else @priority="高";end %>
 <!-- 入力が一括で表示される　-->
 <td><div class="list_content"><%=task.content %></div></td>
 <td><div class="list_deadline_year"><%= task.deadline_year %></div></td>
-<td><div class="list_priority"><%= task.priority %></div></td>
+<td><div class="list_priority"><%= @priority %></div></td>
+<td><div class="list_division"><%= task.division %></div></td>
 <td class="delete_button"><%= link_to("削除","/tasks/#{task.id}/destroy",method: :post) %></td>
 <td class="edit_button"><%= link_to("編集","/tasks/#{task.id}/edit") %></td>
 <td class="detail_button"><%= link_to("詳細","/tasks/#{task.id}") %></td>

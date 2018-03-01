@@ -41,7 +41,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:content , :deadline_year,:priority,:memo)
+    params.require(:task).permit(:content , :deadline_year,:priority,:memo,:division)
   end
 
 end

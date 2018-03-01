@@ -1,13 +1,3 @@
 <h1>Edition Page</h1>
 
-<div class=edit_form>
-  <div  class="form">
-    <%= form_for(@task , :url => @url) do |f| %>
-    <p><%= f.text_area :content , :rows =>"5" %></p>
-    <p><%= f.date_field :deadline_year  %></p>
-    <p><%= f.select :priority  , [["低",1],["中",2],["高",3]] %></p>
-    <p><%= f.text_area :memo , :rows =>"8" %></p>
-    <%= f.submit ("送信")  %>
-    <% end %>
-  </div>
-</div>
+<%= render 'form' %> 
